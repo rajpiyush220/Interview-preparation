@@ -1,0 +1,25 @@
+package com.learning.preparation;
+
+public class ListNode {
+    public int val;
+    public ListNode next;
+
+    public ListNode(int x) {
+        val = x;
+        next = null;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(this.val);
+    }
+
+    public void printAll() {
+        ListNode head = this;
+        while (head != null) {
+            System.out.print(head.val + (head.next != null ? "->" : ""));
+            head = head.next;
+        }
+        System.out.println();
+    }
+}
